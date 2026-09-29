@@ -1,0 +1,101 @@
+html {
+    background-color: black;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.header {
+    top: 0;
+    background: black;
+}
+
+.header-title {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Roboto, sans-serif;
+}
+
+.header-banner {
+    display: block;
+    margin: 20px auto 0;
+}
+
+.gallery {
+    overflow: hidden;
+    opacity: 0;
+    margin: 30px auto;
+    display: flex;
+    max-height: 0;
+    justify-content: center;
+    max-width: 1500px;
+    flex-wrap: wrap;
+    transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 80% !important;
+    }
+}
+
+.card {
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    opacity: 0.5;
+}
+
+.card:hover {
+    border-radius: 10px;
+    opacity: 1.0;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.label {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Roboto, sans-serif;
+}
+
+.modal-background {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  top: 0;
+  left: 0;
+  background-color: black; /* Black w/ opacity */
+}
+
+.modal {
+  aspect-ratio: 2;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  width: 90%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: black; /* Black w/ opacity */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery-expand {
+    opacity: 1;
+    max-height: 10000px;
+    transition: all 0.5s ease-in;
+}
